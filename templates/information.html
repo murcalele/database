@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О нас</title>
+  <link href='../static/img/logo.png' rel='icon' type='image/x-icon'>
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div>
+  <img src='../static/img/menu.png' class='burger' onclick='openBurger()'>
+  <header class="header">
+    <div class="logo" onclick="goToMainPage()">
+      <img class="image" src="../static/img/logo.png" alt="Logo">
+      <div class="header-title">
+        <h1>Всякая всячина</h1>
+      </div>
+    </div>
+  </header>
+  <div class='burger-content'>
+  <nav class="nav-links burger-content hide">
+        <a href="index" title="Главная">Главная</a>
+        <div class='opener'>
+            <a href="store" title="Товары">Товары</a>
+            <div class='opener-content'>
+                <a href="furniture" title="Мебель">Мебель</a>
+                <a href="accessories" title="Аксессуары">Аксессуары</a>
+                <a href="electronics" title="Электроника">Электроника</a>
+            </div>
+        </div>
+        <a href="information" title="О нас">О нас</a>
+        <a href="siteMap" title="Карта сайта">Карта сайта</a>
+        <a href="siteNews" title="Новости сайта">Новости сайта</a>
+        {% if not current_user %}
+        <a href="signup" title="Регистрация">Регистрация</a>
+        <a href="login" title="Войти">Войти</a>
+        {% endif %}
+        {% if current_user %}
+        <a href="logout" title="Выйти">Выйти</a>
+        <a href="shopList" title="Корзина">Корзина</a>
+        {% endif %}
+    </nav>
+    </div>
+  <div class="section">
+    <section class="text-content">
+      <h2>О нашем магазине</h2>
+      <p>
+        Мы предлагаем широкий выбор всякой всячины, от уникальных предметов ручной работы до современных гаджетов. 
+        В нашем магазине вы найдете все, что нужно для повседневной жизни и особенных случаев.
+      </p>
+      <p>
+        Наш магазин расположен в самом сердце Москвы, и мы гордимся тем, что предлагаем качественные товары по доступным ценам.
+      </p>
+    </section>
+    <section class="text-content about">
+      <h2>Отзывы клиентов</h2>
+      <div class="review">
+        <div class="review-author">Иван Иванов</div>
+        <div class="review-content">
+          <p>Отличный магазин! Впервые заказал у них товар и был приятно удивлен качеством и быстрой доставкой.</p>
+        </div>
+      </div>
+      <div class="review">
+        <div class="review-author">Анна Петрова</div>
+        <div class="review-content">
+          <p>Я регулярно покупаю в этом магазине и всегда остаюсь довольной. Вежливый персонал и отличное обслуживание.</p>
+        </div>
+      </div>
+    </section>
+    <section class="text-content about">
+      <h2>История создания</h2>
+      <p>
+        Наш магазин "Всякая всячина" был основан в 2005 году двумя энтузиастами, Алексеем и Екатериной. 
+        Их страсть к уникальным и необычным предметам побудила их создать магазин, где каждый сможет найти что-то особенное и интересное.
+      </p>
+      <p>
+        С течением лет "Всякая всячина" стала популярным местом для поиска уникальных подарков, предметов интерьера и различных аксессуаров.
+        Магазин постоянно расширяется и обновляет свой ассортимент, чтобы удовлетворить потребности и вкусы наших клиентов.
+      </p>
+    </section>
+    <section class="text-content about">
+      <h2>Местоположение нашего офиса</h2>
+      <div class="address">
+        <p>Адрес: г. Москва, ул. Пресненская наб., 8 стр 1, 123112</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8539.665643750775!2d37.541069335665355!3d55.74821460443618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bdd017303b9%3A0xd1f63f945a2450c2!2z0JzQvtGB0LrQstCwINCh0LjRgtC4!5e0!3m2!1sru!2snl!4v1685516824546!5m2!1sru!2snl" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <h2>Адреса наших магазинов</h2>
+      <div class="address">
+        <p>Адрес: г. Москва, ул. Пресненская наб., 8 стр 1, 123112</p>
+      </div>
+      <div class="address">
+        <p>Адрес: г. Москва, ул. Пресненская наб., 8 стр 1, 123112</p>
+      </div>
+      <div class="address">
+        <p>Адрес: г. Москва, ул. Пресненская наб., 8 стр 1, 123112</p>
+      </div>
+    </section>
+    <section class="text-content about">
+      <h2>Контактная информация</h2>
+      <div class="contact-details">
+        <p>Телефон: +7 123 456-7890</p>
+        <p>Email: info@vasyavashego.ru</p>
+        <p>ВКонтакте: vk.com/purpleppassion</p>
+        <p>Telegram: t.me/murcall</p>
+      </div>
+    </section>
+    <div class="ad-content-side" onclick="redirectToAuto()">
+      <img class="adImage3" src="../static/img/auto.png" alt="Good Image">
+    </div>
+  </div>
+  <button onclick="scrollToTop()" id="scrollTopButton" title="Наверх">&#8679;</button>
+  <script src="../static/js/main.js"></script>
+</div>
+</body>
+<div class='footer'>
+    <p>Email: info@vasyavashego.ru</p>
+    <p>Телефон +7 123 456-7890</p>
+    <a onclick=redirectToVk()>ВКонтакте</a>
+    <a onclick=redirectToTg()>Telegram</a>
+</div>
+</html>

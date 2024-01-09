@@ -1,0 +1,579 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    background-color: #005bff;
+    width: 100%;
+    display: inline-flex;
+    justify-content: end;
+    flex: 1 1 auto;
+    user-select: none;
+}
+
+.footer a {
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer p {
+    color: white;
+    text-transform: uppercase;
+    padding-right: 5px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer a:hover {
+    background-color: #337aff;
+}
+
+.header {
+    background: url('../img/header_img.jpg') no-repeat;
+    background-size: cover;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.header-title {
+    margin-left: 5px;
+}
+
+nav {
+    background-color: #00406b;
+    color: #fff;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    padding-left: 1em;
+    flex-wrap: wrap;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0.5em 0 0.5em 1em;
+    position: sticky;
+    top: 0;
+    user-select: none;
+}
+
+.nav-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: #005f9e;
+}
+
+
+.opener {
+    display: flex;
+}
+
+.opener:hover .opener-content {
+    max-height: 10em;
+}
+
+.opener-content {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: absolute;
+    top: 3em;
+    background-color: #00406b;
+    transition: max-height 0.5s;
+}
+
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.goodsContainer {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.good {
+    width: 330px;
+    height: 400px;
+    max-width: 330px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.goodsInformation {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.goodsInformationList {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    margin-right: 12px;
+}
+
+.imageGood {
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+    margin: 0 auto 12px auto;
+}
+
+.imageGoodList {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    margin: 0 auto 12px auto;
+}
+
+/* Стили для основного содержимого */
+.content {
+    padding: 20px;
+}
+
+.about-section, .reviews-section, .location-section, .contact-section, .history-section {
+    margin-bottom: 30px;
+}
+
+.about-section h2, .reviews-section h2, .location-section h2, .contact-section h2, .history-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review {
+    margin-bottom: 20px;
+}
+
+.review-author {
+    font-weight: bold;
+}
+
+.map-container {
+    max-width: 400px;
+}
+
+.address {
+    margin-top: 0px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.section {
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.paragraph {
+    width: 70%;
+}
+
+.text-content {
+    padding: 20px;
+    max-width: 800px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    box-sizing: border-box;
+}
+
+.text-content-list {
+    padding: 20px;
+    max-width: 400px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    box-sizing: border-box;
+}
+
+.ad-content {
+    padding: 20px;
+    max-width: 330px;
+    max-height: 330px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ad-content2{
+    padding: 20px;
+    max-width: 900px;
+    max-height: 330px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ad-content3{
+    display: none;
+}
+
+.ad-content-side{
+    padding: 20px;
+    max-width: 330px;
+    max-height: 600px;
+    position: fixed;
+    z-index: 99;
+    top: 220px;
+    left:0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+#scrollTopButton {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #005bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+.adImage {
+    width: 290px;
+    height: 290px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.adImage2 {
+    width: 800px;
+    height: 290px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.adImage3 {
+    width: 290px;
+    height: 420px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#scrollTopButton {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #005bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#scrollTopButton.show {
+    opacity: 1; /* Кнопка становится видимой */
+    transition: opacity 0.5s ease-in-out; /* Добавляем переход */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.imageGoodInf {
+    width: 140px;
+    height: auto;
+    border-radius: 16px;
+    margin: 0 auto 12px auto;
+    cursor: pointer;
+}
+.imagesContainer {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    margin-bottom: 1em;
+}
+
+/* Всё для слайдера */
+
+.slider {
+    display: flex;
+    align-items: center;
+    height: 31em;
+}
+
+.slides {
+    width: 400px;
+    height: 400аpx;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.slider button {
+    height: 2em;
+    width: 2em;
+}
+
+.about {
+    width: 50em;
+}
+
+.customButton {
+    margin: 5px 0 0 0;
+    min-width: 80px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #005bff;
+    cursor: pointer;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.customButtonText {
+    color: white;
+}
+
+.toPrevious{
+    margin: 2tpx;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #005bff;
+    cursor: pointer;
+}
+
+.toNext {
+    margin: 2px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #005bff;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1100px) {
+    .burger {
+        display: flex !important;
+        cursor: pointer;
+        height: 3em;
+        width: 3em;
+        background-color: #00406b;
+        padding: 0.5em;
+        border-radius: 3em;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 101;
+    }
+
+    .burger-content .opener:hover .opener-content {
+        display: none;
+    }
+
+    .burger-content {
+        transform: translateX(100%);
+        display: flex !important;
+        flex-direction: column !important;
+        background-color: transparent !important;
+        transition: all 0.3s;
+        height: 0;
+    }
+
+    .showBurger {
+        transform: translateX(0%) !important;
+        background-color: #00406b !important;
+        transition: all 0.3s;
+        height: 100vh;
+        position:sticky;
+        top:0;
+    }
+
+    .hide {
+        display: none !important;
+    }
+    .ad-content-side {
+        display: none;
+    }
+    .ad-content2{
+        display: none;
+    }
+    .ad-content3{
+            padding: 20px;
+            max-width: 330px;
+            max-height: 330px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background: rgba(97, 131, 162, 0.1);
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+}
+
+.burger {
+    display: none;
+}
+
+.super_hide {
+    display: none !important;
+}
+
+.error {
+    color: red;
+}
+
+.notification, .notification1 {
+    color: red;
+}
+
+.good-shop {
+    width: 400px;
+    height: 100px;
+    max-width: 400px;
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: rgba(97, 131, 162, 0.1);
+    padding: 24px;
+    box-sizing: border-box;
+}

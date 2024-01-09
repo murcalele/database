@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Информация о товаре Рюкзак Reverse Side</title>
+  <link href='/img/logo.png' rel='icon' type='image/x-icon'>
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class='wrapper'>
+    <img src='../static/img/menu.png' class='burger' onclick='openBurger()'>
+    <header class="header">
+    <div class="logo" onclick="goToMainPage()">
+        <img class="image" src="../static/img/logo.png" alt="Logo">
+        <div class="header-title">
+            <h1>Всякая всячина</h1>
+        </div>
+    </div>
+</header>
+    <div class='burger-content'>
+    <nav class="nav-links burger-content hide">
+        <a href="/index" title="Главная">Главная</a>
+        <div class='opener'>
+            <a href="/store" title="Товары">Товары</a>
+            <div class='opener-content'>
+                <a href="/furniture" title="Мебель">Мебель</a>
+                <a href="/accessories" title="Аксессуары">Аксессуары</a>
+                <a href="/electronics" title="Электроника">Электроника</a>
+            </div>
+        </div>
+        <a href="/information" title="О нас">О нас</a>
+        <a href="/siteMap" title="Карта сайта">Карта сайта</a>
+        <a href="/siteNews" title="Новости сайта">Новости сайта</a>
+        <a href="/logout" title="Выйти">Выйти</a>
+        <a href="/shopList" title="Корзина">Корзина</a>
+    </nav>
+    </div>
+    <div class="goodsContainer">
+        {% for el in orders %}
+        {% for i in items %}
+        {% if el.item == i.id %}
+    <div class="goodsInformationList">
+        <div class='text-content-list' style="margin:15px 15px">
+            <img class="imageGoodList" src="../static/img/image{{i.id}}.png" alt="No image">
+            </div>
+            <div class='text-content-list' style="margin:15px 15px">
+                <label>{{i.good}}</label>
+                <label>Цена - {{i.cost}} р.</label>
+                <label>Количество - {{el.count}} шт.</label>
+            </div>
+      
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="goodsContainer">
+            <form method='post'>
+                <input type="submit" value="Убрать товары из корзины" class="customButton">
+            </form>
+        </div>
+    <button onclick="scrollToTop()" id="scrollTopButton" title="Наверх">&#8679;</button>
+  <script src="../static/js/main.js"></script>
+</div>
+</body>
+<div class='footer'>
+    <p>Email: info@vasyavashego.ru</p>
+    <p>Телефон +7 123 456-7890</p>
+    <a onclick=redirectToVk()>ВКонтакте</a>
+    <a onclick=redirectToTg()>Telegram</a>
+</div>
+</html>

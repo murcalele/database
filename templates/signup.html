@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Всякая всячина</title>
+  <link href='../static/img/logo.png' rel='icon' type='image/x-icon'>
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class='wrapper'>
+<img src='../static/img/menu.png' class='burger' onclick='openBurger()'>
+  <header class="header">
+    <div class="logo" onclick="goToMainPage()">
+        <img class="image" src="../static/img/logo.png" alt="Logo">
+        <div class="header-title">
+            <h1>Всякая всячина</h1>
+        </div>
+    </div>
+</header>
+    <div class='burger-content'>
+    <nav class="nav-links burger-content hide">
+        <a href="index" title="Главная">Главная</a>
+        <div class='opener'>
+            <a href="store" title="Товары">Товары</a>
+            <div class='opener-content'>
+                <a href="furniture" title="Мебель">Мебель</a>
+                <a href="accessories" title="Аксессуары">Аксессуары</a>
+                <a href="electronics" title="Электроника">Электроника</a>
+            </div>
+        </div>
+        <a href="information" title="О нас">О нас</a>
+        <a href="siteMap" title="Карта сайта">Карта сайта</a>
+        <a href="siteNews" title="Новости сайта">Новости сайта</a>
+        <a href="login" title="Войти">Войти</a>
+    </nav>
+    </div>
+    <div class="goodsContainer">
+    <form method="post">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <p class='notification1'>{{messages[0]}}</p>
+        {% endif %}
+        {% endwith %}
+        <h3>Введите ваши данные</h3>
+        <p class='notification super_hide'>Вы не заполнили обязательные поля!</p>
+        <p>Введите ваше имя</p>
+        <input type="text" name="name" id="name"><br>
+        <p>Введите вашу фамилию</p>
+        <input type="text" name="surname" id="surname"><br>
+        <p>Введите вашу почту</p>
+        <input type="email" name="mail" id="mail"><br>
+        <p>Введите пароль</p>
+        <input type="password" name="pass" id="pass" onchange='checkPass()'><br>
+        <p>Повторите пароль</p>
+        <input type="password" name="checkpass" id="checkpass" onchange='checkPass()'><br>
+        <p class='error super_hide'>Пароли не совпадают!</p>
+        <p>Введите адрес проживания</p>
+        <input type="text" name="adress" id="adress"><br>
+        <p>Нажмите, чтобы завершить регистрацию</p>
+        <input type="submit" value="Зарегистрироваться" class="customButton" onclick='checkInfo()'>
+    </form>
+    </div>
+    <button onclick="scrollToTop()" id="scrollTopButton" title="Наверх">&#8679;</button>
+    <script src="../static/js/main.js"></script>
+</div>
+</body>
+<div class='footer'>
+    <p>Email: info@vasyavashego.ru</p>
+    <p>Телефон +7 123 456-7890</p>
+    <a onclick=redirectToVk()>ВКонтакте</a>
+    <a onclick=redirectToTg()>Telegram</a>
+</div>
+</html>
